@@ -55,9 +55,9 @@ public class ProjectController {
 			projectActionList.setDescription(p.getDescription());
 			projectActionList.setCompleted(p.getCompleted());
 			
-			List a = actionRepository.getSetOfActionsForAProject(project_id);
+			List act = actionRepository.getSetOfActionsForAProject(project_id);
 			
-			projectActionList.setAction(a);
+			projectActionList.setAction(act);
 			
 			return new ResponseEntity<ProjectActionList>(projectActionList, HttpStatus.OK);
 				
